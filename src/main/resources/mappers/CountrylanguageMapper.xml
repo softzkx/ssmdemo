@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jeff.mapper.CountrylanguageMapper" >
+  <resultMap id="BaseResultMap" type="com.jeff.po.Countrylanguage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CountryCode" property="countrycode" jdbcType="CHAR" />
+    <id column="Language" property="language" jdbcType="CHAR" />
+    <result column="IsOfficial" property="isofficial" jdbcType="CHAR" />
+    <result column="Percentage" property="percentage" jdbcType="REAL" />
+  </resultMap>
+
+
+
+
+
+
+
+</mapper>

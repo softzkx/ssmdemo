@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jeff.mapper.CityMapper">
+    <resultMap id="BaseResultMap" type="com.jeff.po.City">
+        <!--
+          WARNING - @mbggenerated
+        -->
+
+    </resultMap>
+
+    <select id="selectByPage" parameterType="com.jeff.qo.CityPageQuery" resultMap="BaseResultMap">
+      select * from city where 1=1 limit ${pageNum},${pageSize}
+    </select>
+
+    <select id="getCount" parameterType="City" resultType="Integer">
+        SELECT COUNT(id) FROM city where 1=1
+        <if test="cityId != null">
+            AND id = #{id}
+        </if>
+        <if test="city != null">
+            AND name = #{name}
+        </if>
+        <if test="countryId != null">
+            AND country_code = #{countryCode}
+        </if>
+    </select>
+
+</mapper>
